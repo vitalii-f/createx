@@ -1,0 +1,114 @@
+.slider {
+    min-width: 100%;
+}
+
+.slider__container {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    /* background-image: url(../../img/png/bg-image-slider.png); */
+    background-repeat: no-repeat;
+    height: 988px;
+}
+
+.slider__content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+/* .slider__item {
+    
+} */
+
+.slider__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    margin: 24px 0;
+}
+
+.slider__text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 60px 0;
+}
+
+.slider__item > button {
+    cursor: pointer;
+    color: var(--color-white);
+    margin: 0 24px 0 0;
+    padding: 10px 40px;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    background-color: unset;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.slider__item > button:nth-of-type(2) {
+    color: var(--color-white);
+    margin: 0 24px 0 0;
+    padding: 10px 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.slider__prev, .slider__next {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background-color: var(--color-white);
+    opacity: 0.5;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+
+    transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.slider__prev:hover, .slider__next:hover {
+    transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    opacity: 1;
+    /* background-color: var(--color-primary); */
+}
+
+.slider__prev {
+    grid-column: 1/2;
+}
+
+.slider__next {
+    grid-column: 3/4;
+}
+
+.slider__indicators {
+    display: flex;
+    margin: 230px 0 0 0;
+}

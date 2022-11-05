@@ -1,0 +1,24 @@
+.sliderBack {
+    width: 100%;
+    height: 988px;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sliderBack > img {
+    width: 100%;
+    height: 988px;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    filter: brightness(65%);
+    -webkit-filter: brightness(65%);
+}
+
+._activeSlide {
+    display: block !important;
+}
