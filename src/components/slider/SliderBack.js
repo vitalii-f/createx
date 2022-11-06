@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './SliderBack.css';
 
 export function SliderBack(props) {
@@ -6,6 +7,8 @@ export function SliderBack(props) {
 
   let name;
   props.activeSlide ? name="slider__background _activeSlide" : name="slider__background";
+
+  
 
   function createSliderBackground (count) {
     const sliderBackground = [];
@@ -17,9 +20,23 @@ export function SliderBack(props) {
     return sliderBackground;
   }
 
+  useEffect(() => {
+    const slider =  document.querySelector('.sliderBack');
+    if (slider) {
+      slider.addEventListener('scroll', (event) => {
+        console.log("YES")
+      });
+    } else console.log("NULL")
+  });
+    
+  
+
   return (
-    <div className="sliderBack" >
-      {createSliderBackground(slideCount)}
-    </div>
+    <>
+      <div className="sliderBack" >
+        {createSliderBackground(slideCount)}
+      </div>
+    </>
+    
   )
 }
